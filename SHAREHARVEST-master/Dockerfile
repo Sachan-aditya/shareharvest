@@ -1,13 +1,16 @@
-# Use an official OpenJDK base image
 FROM openjdk:17-jdk-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy Maven/Gradle files and download dependencies
+# Copy Maven wrapper and related files
 COPY pom.xml ./
 COPY mvnw ./
 COPY .mvn ./.mvn
+
+# Grant execute permissions to mvnw
+RUN chmod +x ./mvnw  # <--- Make sure this line is exactly here
+
+# Download dependencies
 RUN ./mvnw dependency:go-offline
 
 # Copy source code
@@ -16,8 +19,9 @@ COPY src ./src
 # Build the application
 RUN ./mvnw package -DskipTests
 
-# Expose the port
+# Final image
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=0 /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Run the application
-ENTRYPOINT ["java", "-jar", "/app/target/shareharvest-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]
