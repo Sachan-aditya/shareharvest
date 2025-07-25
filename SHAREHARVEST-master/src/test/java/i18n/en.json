@@ -1,0 +1,11 @@
+{
+  "greeting": "Hello, %s!",
+  "farewell": "Goodbye, %s!",
+  "welcome_message": "Welcome to ShareHarvest",
+  "crop_added": "Crop %s added successfully!",
+  "error_occurred": "An error occurred. Please try again.",
+  "language_selected": "Language switched to English",
+  "user_registered": "User %s registered successfully!",
+  "order_placed": "Your order has been placed successfully!",
+  "no_data_found": "No data found for your request."
+}

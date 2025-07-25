@@ -1,0 +1,6 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+*.js linguist-vendored
+*.json linguist-vendored
+/static/** linguist-vendored
+/frontend/** linguist-vendored
