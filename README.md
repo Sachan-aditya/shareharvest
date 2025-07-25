@@ -1,7 +1,7 @@
 # ShareHarvest
 
 ShareHarvest is a community-driven platform designed to connect people for sharing surplus food, resources, or harvest from gardens and farms. Our mission is to reduce waste, foster sustainable living, and build stronger communities through collaborative resource sharing.  
-![ShareHarvest Screenshot](https://github.com/Sachan-aditya/SHAREHARVEST/blob/master/Screenshot%202025-04-27%20140647.png)
+![ShareHarvest Screenshot](https://i.ibb.co/Rp169MRL/Screenshot-2025-07-25-154730.png)
 
 ## Table of Contents
 - [Overview](#overview)
